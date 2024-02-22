@@ -11,8 +11,6 @@ const addTask=(category,task,time)=>{
         console.log(`${category} does not exist`);
     }
 };
-
-//console.log("todolist");
 //console.log(todoList);
 const displayListByCategory=()=>{
     for(const category in todoList){
@@ -35,12 +33,13 @@ const markTaskAsCompleted=(category,task)=>{
         //markTaskAsCompleted("school", 0);
       
         const removeTask=(category,task)=>{
-            if (task >= 0 && task < todoList[category].length && todoList[category][task].completed === true) {
+            if (task >= 0 && task < todoList[category].length) {
                  todoList[category].splice(task, 1);
-                return todoList;
+                 console.log('\n\n after removing task:\n');
+                return todoList; 
                 
             }else{
-             return 'task is not completed';
+             return 'task is not available!';
                 
             }
         };
@@ -48,8 +47,8 @@ const markTaskAsCompleted=(category,task)=>{
         addTask("personal","visit a frieand ","20:00.pm");
         addTask("school","presentation ","03:00 pm");
         addTask("personal","run at","05:00.pm");
-        markTaskAsCompleted("school", 0);
-        console.log(displayListByCategory())
-        const result=  removeTask("school",0);
-        console.log(result);
+        markTaskAsCompleted("school", 0); //mark task as completed
+        console.log(displayListByCategory()); // display all todo list after making task as complete
+        const result=  removeTask("personal",1); // remove task, i removed task in category personal, task on index 1
+        console.log(result); // display list after removing
          //console.log(displayListByCategory());

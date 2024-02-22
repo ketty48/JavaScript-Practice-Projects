@@ -29,7 +29,6 @@ let questionsAnswered = 0;
 let displayedQuestions = [];
 
 function displayQuestion() {
-    // If all questions have been answered, display the final score and exit
     if (questionsAnswered === quizGame.length) {
         const totalPossibleScore = quizGame.length * 2; // Each question is worth 2 marks
         console.log(`All questions have been answered.`);
@@ -74,7 +73,6 @@ function displayQuestion() {
 
         questionsAnswered++;
 
-        // Add the displayed question to the displayedQuestions array
         displayedQuestions.push(randomIndex);
 
         rl.close();
