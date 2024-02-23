@@ -46,7 +46,7 @@ const markTaskAsCompleted=(category,task)=>{
         addTask("school","Do the assigniment","12:00 pm");
         addTask("personal","visit a frieand ","20:00.pm");
         addTask("school","presentation ","03:00 pm");
-        addTask("personal","run at","05:00.pm");
+        addTask("personal","run","05:00.pm");
         markTaskAsCompleted("school", 0); //mark task as completed
         console.log(displayListByCategory()); // display all todo list after making task as complete
         const result=  removeTask("personal",1); // remove task, i removed task in category personal, task on index 1
